@@ -1,0 +1,44 @@
+{
+  "name": "subtext",
+  "version": "0.1.0",
+  "description": "Pub/sub where subscriptions are written in English. Semantic message routing with TypeSafe's System One judgments.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18"
+  },
+  "license": "MIT",
+  "author": "Yoni Davidson",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonidavidson/subtext.git"
+  },
+  "keywords": [
+    "pubsub",
+    "semantic",
+    "typesafe",
+    "system-one",
+    "noul",
+    "routing"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "web": "node --env-file-if-exists=.env src/server.ts",
+    "web:mock": "node src/server.ts --mock",
+    "demo": "node src/demo.ts",
+    "demo:live": "node --env-file-if-exists=.env src/demo.ts --live",
+    "cli": "node src/cli.ts",
+    "cli:live": "node --env-file-if-exists=.env src/cli.ts --live",
+    "test": "node --test test/bus.test.ts test/server.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

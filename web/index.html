@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>subtext</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23b3372c'/><text x='32' y='45' font-size='38' text-anchor='middle' fill='white' font-family='serif'>文</text></svg>"
+    />
+  </head>
+  <body>
+    <header class="top">
+      <div class="mark" aria-hidden="true">文</div>
+      <div>
+        <h1>subtext</h1>
+        <p>I read every message and bring it to whoever asked for it.</p>
+      </div>
+      <span id="mode" class="badge">…</span>
+    </header>
+
+    <div id="practice" class="strip" hidden>
+      🧪 <b>Practice robot.</b> No key, so I'm just matching words. Add a key for the real robot.
+    </div>
+
+    <main>
+      <section>
+        <h2 class="step"><span>1</span> What do you care about?</h2>
+        <p class="sub">Write it like you would say it.</p>
+
+        <div id="wants" class="wants"></div>
+
+        <div class="add">
+          <input id="want-input" placeholder="I want to know about…" autocomplete="off" />
+          <button id="want-add" class="big">Add ➕</button>
+        </div>
+        <div id="want-error" class="error" hidden></div>
+        <button id="reset" class="link">↺ start over with the starter set</button>
+      </section>
+
+      <section>
+        <h2 class="step"><span>2</span> Send a message</h2>
+        <textarea
+          id="msg-text"
+          rows="3"
+          dir="auto"
+          placeholder="Type or paste any message…"
+        ></textarea>
+        <button id="send" class="big wide">Send it! ✉️</button>
+        <div id="msg-error" class="error" hidden></div>
+        <div class="samples">
+          <span class="sub">…or tap one:</span>
+          <div id="samples" class="chips"></div>
+        </div>
+
+        <h2 class="step"><span>3</span> Who got it?</h2>
+        <div id="result" class="result">
+          <p class="muted">Send a message and I'll tell you who wants it.</p>
+        </div>
+        <div id="share" class="share" hidden></div>
+      </section>
+    </main>
+
+    <details class="grown">
+      <summary>For grown-ups 🧰</summary>
+      <p id="stats" class="muted mono"></p>
+      <div id="grown-wants"></div>
+      <h3>Earlier messages</h3>
+      <div id="history" class="history"><p class="muted">Nothing yet.</p></div>
+    </details>
+
+    <footer>文 · one question per want · the robot shows its work</footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
