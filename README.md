@@ -154,7 +154,3 @@ verdict }` — so a caller can act on the full routing table, not only the deliv
 - The `review` tier is just a callback — bring your own queue.
 - Roadmap: persistence, sources (RSS/GitHub/Slack), per-subscription probability history,
   auth for the web demo if it ever leaves localhost.
-
-## License
-
-MIT
